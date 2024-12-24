@@ -1,4 +1,4 @@
-/* Resetting some default browser styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,90 +6,111 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
-/* Main container for centering content */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header styles */
-header {
-    background-color: #333;
+/* Navigation */
+nav {
+    background-color: #2c3e50;
     color: #fff;
-    padding: 30px 0;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+}
+
+nav ul li a:hover {
+    background-color: #ff6347;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 80px 0;
     text-align: center;
+    margin-top: 60px;
+    border-bottom: 5px solid #ff6347;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
-/* Contact Information Section */
-.contact {
-    background-color: #fff;
-    padding: 40px 0;
+/* Section Styles */
+section {
+    padding: 60px 0;
 }
 
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* About Section */
+#about h2 {
+    font-size: 2.5rem;
+    color: #34495e;
 }
 
-.contact-info p {
-    margin-bottom: 10px;
+#about p {
     font-size: 1.1rem;
-}
-
-.contact-info a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
+    line-height: 1.8;
 }
 
 /* Skills Section */
-.skills {
-    padding: 40px 0;
+#skills h2 {
+    font-size: 2.5rem;
+    color: #34495e;
 }
 
-.skills h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.skill-item {
+    margin-bottom: 30px;
 }
 
-.skills ul {
-    list-style-type: none;
-    padding-left: 0;
+.skill-item h3 {
+    font-size: 1.8rem;
+    color: #34495e;
 }
 
-.skills li {
+.skill-item p {
     font-size: 1.1rem;
-    margin-bottom: 10px;
 }
 
 /* Experience Section */
-.experience {
-    background-color: #fff;
-    padding: 40px 0;
-}
-
-.experience h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+#experience h2 {
+    font-size: 2.5rem;
+    color: #34495e;
 }
 
 .job {
@@ -98,16 +119,11 @@ header p {
 
 .job h3 {
     font-size: 1.8rem;
-    color: #333;
-}
-
-.job p {
-    font-size: 1.2rem;
-    color: #555;
+    color: #34495e;
 }
 
 .job ul {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;
 }
 
@@ -117,39 +133,30 @@ header p {
 }
 
 /* Projects Section */
-.projects {
-    padding: 40px 0;
-}
-
-.projects h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.project-list {
-    list-style-type: none;
-    padding: 0;
+#projects h2 {
+    font-size: 2.5rem;
+    color: #34495e;
 }
 
 .project-item {
     background-color: #fff;
     border: 1px solid #ddd;
-    margin-bottom: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-item:hover {
-    background-color: #f1f1f1;
+    background-color: #ff6347;
+    transform: scale(1.05);
 }
 
 .project-item h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
 }
 
 .project-item a {
-    color: #007BFF;
+    color: #2c3e50;
     text-decoration: none;
 }
 
@@ -159,20 +166,56 @@ header p {
 
 .project-item p {
     font-size: 1.1rem;
-    color: #555;
 }
 
-/* Footer Styles */
+/* Contact Section */
+#contact h2 {
+    font-size: 2.5rem;
+    color: #34495e;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2c3e50;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
     padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 40px;
 }
 
-footer p {
-    font-size: 1rem;
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
 }
